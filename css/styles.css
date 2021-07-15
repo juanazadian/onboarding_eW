@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 24px;
 }
 
 .row-container {
@@ -12,11 +13,43 @@
   align-items: center;
 }
 
+.left-align-flex {
+  align-items: flex-start;
+}
+
+.third-width {
+  width: 33%;
+}
+
+.forth-width {
+  width: 28%;
+}
+
 .header-background {
-  height: 533px;
+  height: 450px;
   margin: 38px 0 52px;
   background-image: linear-gradient(106deg, #11afaf 0%, #5853bc 104%);
-  padding: 80px 0;
+  padding: 50px 0;
+}
+
+.footer-background {
+  height: 100px;
+  background-image: linear-gradient(106deg, #11afaf 0%, #5853bc 104%);
+  padding: 50px 0;
+}
+
+.banner-medium-background {
+  height: 227px;
+  margin: 50px 0 0px;
+  padding: 53px 208px;
+  background-color: #f0f0f0;
+}
+
+.banner-large-background {
+  height: 313px;
+  margin: 50px 0 0px;
+  padding: 53px 208px;
+  background-color: #f0f0f0;
 }
 
 .header-logo {
@@ -25,15 +58,27 @@
 }
 
 .margin-title {
-  margin:60px 0 5px;
+  margin:60px 0 0px;
 }
 
 .margin-subtitle {
-  margin:5px 0;
+  margin:0px 0px;
 }
 
-.margin-top-small {
-  margin-top:5px;
+.margin-button {
+  margin: 30px 0px;
+}
+
+.margin-box {
+  margin: 15px 15px;
+}
+
+.large-padding {
+  padding: 26px 110px 0px;
+}
+
+.small-padding {
+  padding: 26px 20px 26px;
 }
 
 .primary-font {
@@ -42,30 +87,48 @@
   font-stretch: normal;
   font-style: normal;
   line-height: 1.2;
-  letter-spacing: normal;
-  text-align: center;
+  letter-spacing: normal
 }
 
 .secondary-font {
   font-family: Nunito;
-  font-weight: normal;
+  font-weight: 400;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.34;
-  letter-spacing: normal;
-  text-align: center;
+  letter-spacing: normal
+}
+
+.secondary-font b {
+  font-weight: 600;
+}
+
+.large-padding .secondary-font b {
+  font-weight: 900;
+}
+
+.secondary-font .third-color b {
+  font-weight: 600
+}
+
+h6 {
+  font-size: 16px;
 }
 
 h5 {
   font-size: 24px;
 }
 
-h3 {
+h4 {
   font-size: 32px;
 }
 
-h2 {
+h3 {
   font-size: 42px;
+}
+
+h2 {
+  font-size: 48px;
 }
 
 h1 {
@@ -80,10 +143,118 @@ h1 {
   color: #fcae00;
 }
 
+.primary-background-color {
+  background-color: #fcae00;
+}
+
+.secondary-background-color {
+  background-color: #5853bc;
+}
 .secondary-color {
   color: #5853bc;
 }
 
-.body-color{
-  color: var(--warm-grey);
+.third-color {
+  color: #11afaf;
+}
+
+.third-background-color {
+  background-color: #11afaf;
+}
+
+.body-color {
+  color: #707070;
+}
+
+.text-align-center {
+  text-align:center;
+}
+
+.text-align-left {
+  text-align: left;
+  justify-content: left;
+}
+
+.align-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.large-button {
+  width: 13%;
+  padding: 12px 120px 11px 115px;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.medium-button {
+  width: 77px;
+  height: 20px;
+  margin: 44px 0 0;
+  padding: 12px 54px 11px 52px;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.grey-combobox {
+  width: 700px;
+  height: 25px;
+  margin: 2px 0px 20px 0px;
+  padding: 11px 32px 9px 40px;
+  border-radius: 50px;
+  border: solid 1px #d2d2d2;
+  background-color: #ffffff;
+}
+
+.white-box {
+  height: 178px;
+  margin: 0px 0px 10px;
+  padding: 35px 59px 35px 60px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #665eff;
+  background-color: #ffffff;
+  text-align:center
+}
+
+.grey-box {
+
+  border-radius: 10px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #d2d2d2;
+  background-color: #ffffff;
+}
+
+.round-button {
+  width: 28px;
+  height: 40px;
+  margin: 0 59px 42px;
+  padding: 7px 14px;
+  border: solid 1px #707070;
+  border-radius: 40px;
+}
+
+.width-cap {
+  width: 300px;
+}
+
+.grey-box h5 {
+  font-size: 20px;
+}
+
+.logo-container {
+  width: 133px;
+  height: 133px;
+  margin: 0 58px 21px 55px;
+  object-fit: contain;
+  border: solid 1px #d2d2d2;
+  border-radius: 65px;
+}
+
+.brand-container {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #d2d2d2;
+  background-color: #ffffff;
 }
