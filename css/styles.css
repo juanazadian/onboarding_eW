@@ -111,6 +111,14 @@
   font-weight: 600
 }
 
+.font-size-medium {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
 h6 {
   font-size: 16px;
 }
@@ -220,7 +228,6 @@ h1 {
 }
 
 .grey-box {
-
   border-radius: 10px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   border: solid 1px #d2d2d2;
