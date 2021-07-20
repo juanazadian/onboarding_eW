@@ -9,63 +9,267 @@ $font-xlarge: 48px;
 $font-xxlarge: 60px;
 
 
+@media screen and (max-width: 800px) {
+  .header-logo {
+    width:100%;
+    margin-top: 15px;
+  }
+
+  .column-container {
+    display: flex;
+    margin: 12px;
+    align-items: center;
+  }
+
+  .row-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-align-flex {
+    align-items: center;
+  }
+
+  .secondary-background-color {
+    background-color: #665eff;
+  }
+
+  .font-size-small {
+    font-size: $font-xsmall;
+  }
+
+  .font-size-medium {
+    font-size: 21px;
+  }
+
+  .none-display-mobile {
+    display: none !important;
+  }
+
+  .grey-combobox {
+    width: 277px;
+    height: 40px;
+  }
+
+  .large-button {
+    width: 210px;
+    padding: 12px 130px 11px 80px;
+  }
+
+  .medium-button {
+    width: 143px;
+    height: 35px;
+    padding: 8px 36px 11px 39px;
+  }
+
+  .large-padding {
+    padding: 26px 12px 0px;
+  }
+
+  .banner-small-background {
+    margin: 50px 0 0 0;
+    height: 193px;
+    padding: 10px 20px;
+  }
+
+  .banner-medium-background {
+    margin: 0px;
+    height: 340px;
+    padding: 10px 20px;
+  }
+
+  .banner-large-background {
+    height: 800px;
+    padding: 10px 20px;
+    margin: 0px;
+  }
+
+  .footer-background {
+    height: 240px;
+  }
+
+  h4 {
+    font-size: $font-xsmall;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .column-container {
+    text-align: center;
+  }
+  .third-width {
+    width:100%;
+  }
+
+  .forth-width {
+    width: 50%;
+  }
+
+  .margin-fix-button {
+    margin: 5px 0px 29px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+
+  .none-display-desktop {
+    display: none !important;
+  }
+
+  .header-background {
+    height: 533px;
+  }
+
+  .header-logo {
+    width:30%;
+    margin-top: 15px;
+  }
+
+  .row-container {
+    flex-direction: row;
+  }
+
+  .column-container {
+    margin: 24px;
+    display: flex;
+  }
+
+  .row-container {
+    display: flex;
+  }
+
+  .grey-combobox {
+    width: 700px;
+    height: 42px;
+  }
+
+  .large-button {
+    width: 310px;
+    padding: 12px 120px 11px 115px;
+  }
+
+  .medium-button {
+    width: 206px;
+    height: 42px;
+    padding: 12px 54px 11px 52px;
+  }
+
+  .secondary-background-color {
+    background-color: $secondary-color;
+  }
+
+  .font-size-small {
+    font-size: $font-small;
+  }
+
+  .font-size-medium {
+    font-size: $font-small;
+  }
+
+  .left-align-flex {
+    align-items: flex-start;
+  }
+
+  .large-padding {
+    padding: 26px 110px 0px;
+  }
+
+  .banner-small-background {
+    margin: 50px 0 0 0;
+    height: 335px;
+    padding: 10px 20px;
+  }
+
+  .banner-medium-background {
+    height: 350px;
+    padding: 53px 340px;
+    margin: 50px 0 0 0;
+  }
+
+  .banner-large-background {
+    margin: 50px 0 0px;
+    height: 450px;
+    padding: 28px 208px;
+  }
+
+  .footer-background {
+    height: 234px;
+  }
+
+  h6 {
+    font-size: $font-xsmall;
+  }
+
+  h5 {
+    font-size: $font-small;
+  }
+
+  h4 {
+    font-size: $font-medium;
+  }
+
+  h3 {
+    font-size: $font-large;
+  }
+
+  h2 {
+    font-size: $font-xlarge;
+  }
+
+  h1 {
+    font-size: $font-xxlarge;
+  }
+
+  .third-width {
+    width: 33%;
+  }
+
+  .forth-width {
+    width: 28%;
+  }
+
+  .margin-fix-button {
+    margin: 30px 0 5px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .column-container {
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin: 0 24px;
 }
 
 .row-container {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.left-align-flex {
-  align-items: flex-start;
-}
-
-.third-width {
-  width: 33%;
-}
-
-.forth-width {
-  width: 28%;
+.center-align-flex {
+  align-items: center;
 }
 
 .header-background {
-  height: 450px;
-  margin: 38px 0 52px;
+  margin: 17px 0;
   background-image: linear-gradient(106deg, $third-color 0%, $secondary-color 104%);
-  padding: 50px 0;
+  padding: 50px 22px;
 }
 
 .footer-background {
-  height: 100px;
   background-image: linear-gradient(106deg, $third-color 0%, $secondary-color 104%);
   padding: 50px 0;
 }
 
-.banner-medium-background {
-  height: 227px;
-  margin: 50px 0 0px;
-  padding: 53px 208px;
+.banner-small-background, .banner-medium-background, .banner-large-background {
   background-color: #f0f0f0;
-}
-
-.banner-large-background {
-  height: 313px;
-  margin: 50px 0 0px;
-  padding: 53px 208px;
-  background-color: #f0f0f0;
-}
-
-.header-logo {
-  width:502px;
-  margin-top: 15px;
 }
 
 .margin-title {
@@ -85,15 +289,13 @@ $font-xxlarge: 60px;
 }
 
 .large-padding {
-  padding: 26px 110px 0px;
-
   .secondary-font b {
     font-weight: 900;
   }
 }
 
 .small-padding {
-  padding: 26px 20px 26px;
+  padding: 26px 0px 26px;
 }
 
 .primary-font {
@@ -120,37 +322,10 @@ $font-xxlarge: 60px;
   }
 }
 
-.font-size-small {
-  font-size: $font-small;
-}
-
 p {
   font-size: $font-xsmall;
 }
 
-h6 {
-  font-size: $font-xsmall;
-}
-
-h5 {
-  font-size: $font-small;
-}
-
-h4 {
-  font-size: $font-medium;
-}
-
-h3 {
-  font-size: $font-large;
-}
-
-h2 {
-  font-size: $font-xlarge;
-}
-
-h1 {
-  font-size: $font-xxlarge;
-}
 
 .white-color {
   color: #ffffff;
@@ -164,9 +339,6 @@ h1 {
   background-color: $primary-color;
 }
 
-.secondary-background-color {
-  background-color: $secondary-color;
-}
 .secondary-color {
   color: $secondary-color;
 }
@@ -197,27 +369,24 @@ h1 {
   text-align: right;
 }
 
+.font-size-large {
+  font-size: 34px;
+}
+
 .large-button {
-  width: 13%;
-  padding: 12px 120px 11px 115px;
   border-radius: 50px;
   text-align: center;
   text-decoration: none;
 }
 
 .medium-button {
-  width: 77px;
-  height: 20px;
   margin: 44px 0 0;
-  padding: 12px 54px 11px 52px;
   border-radius: 50px;
   text-align: center;
   text-decoration: none;
 }
 
 .grey-combobox {
-  width: 700px;
-  height: 25px;
   margin: 2px 0px 20px 0px;
   padding: 11px 32px 9px 40px;
   border-radius: 50px;
@@ -226,7 +395,7 @@ h1 {
 }
 
 .white-box {
-  height: 178px;
+  height: 270px;
   margin: 0px 0px 10px;
   padding: 35px 59px 35px 60px;
   border-radius: 10px;
@@ -246,10 +415,10 @@ h1 {
 }
 
 .round-button {
-  width: 28px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   margin: 0 59px 42px;
-  padding: 7px 14px;
+  padding: 6px 5px;
   border: solid 1px #707070;
   border-radius: 40px;
 }
