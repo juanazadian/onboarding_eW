@@ -174,6 +174,7 @@ $font-xxlarge: 60px;
 
   .left-align-flex {
     align-items: flex-start;
+    padding: 0px 70px 0px 0px;
   }
 
   .large-padding {
@@ -188,7 +189,7 @@ $font-xxlarge: 60px;
 
   .banner-medium-background {
     height: 350px;
-    padding: 53px 340px;
+    padding: 53px 263px;
     margin: 50px 0 0 0;
   }
 
@@ -227,7 +228,7 @@ $font-xxlarge: 60px;
   }
 
   .third-width {
-    width: 33%;
+    width: 40%;
   }
 
   .forth-width {
@@ -241,6 +242,10 @@ $font-xxlarge: 60px;
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
 }
 
 .column-container {
@@ -392,7 +397,14 @@ p {
   border-radius: 50px;
   border: solid 1px #d2d2d2;
   background-color: #ffffff;
+  -webkit-appearance: none;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd0;
+  background-position-x: calc( 100% - 15px );
+  select {
+    padding: 0px 20px;
+  }
 }
+
 
 .white-box {
   height: 270px;
