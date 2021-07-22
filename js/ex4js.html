@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+
+
+    <title>ex4</title>
+  </head>
+  <body>
+    <div id="modal" class="modal-juan text-white">
+      <div class="modal-content-juan bg-success">
+        <h1>New Item</h1>
+        <form id="form" action=#>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name"><br>
+          <label for="cost">Cost:</label><br>
+          <input type="text" id="cost" name="cost"><br><br>
+          <input type="submit" id="create" value="Create">
+        </form>
+      </div>
+
+    </div>
+    <main>
+      <section class="container-fluid bg-primary">
+        <section class="row d-flex justify-content-center">
+          <section class="col-9 text-white">
+            <h1>JS recruiting test</h1>
+            <p class="m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laudantium modi harum laborum! Autem deserunt quam provident tempora alias error? Maxime debitis officiis delectus voluptas quo quis quod numquam explicabo.</p>
+            <h1 class="m-4">Budget: $<span id="budget">2250</span></h1>
+            <table class="table text-white">
+              <thead>
+                <tr>
+                  <th scope="col" class="table-success">Wishlist</th>
+                  <th scope="col">Cost</th>
+                  <th scope="col">Completed?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ruby Metaprogramming Book</td>
+                  <td>500</td>
+                  <td><input type="checkbox" name="done1" value="done1"></td>
+                </tr>
+                <tr>
+                  <td>MacBook Pro</td>
+                  <td>1300</td>
+                  <td><input type="checkbox" name="done1" value="done1"></td>
+                </tr>
+                <tr>
+                  <td>Electric Bike</td>
+                  <td>670</td>
+                  <td><input type="checkbox" name="done1" value="done1"></td>
+                </tr>
+                <tr>
+                  <td>Sennheiser Headphones</td>
+                  <td>180</td>
+                  <td><input type="checkbox" name="done1" value="done1"></td>
+                </tr>
+                <tr>
+                  <td>home Brew Beer Kit</td>
+                  <td>320</td>
+                  <td><input type="checkbox" name="done1" value="done1"></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+        <section class="row d-flex justify-content-center">
+          <section class="col-3 text-white">
+            <button id="addbtn" type="button" class="btn btn-outline-secondary bg-white">A D D</button>
+          </section>
+          <section class="col-3 text-white">
+            <button id="optimbtn" type="button" class="btn btn-outline-secondary bg-white">OPTIMIZE</button>
+          </section>
+        </section>
+      </section>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>
