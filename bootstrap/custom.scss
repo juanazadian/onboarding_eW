@@ -1,0 +1,161 @@
+$theme-colors: (
+  "primary":       #fcae00,
+  "secondary":     #5853bc,
+  "tertiary":       #11afaf
+);
+$border-radius: .625rem;
+$gray-900:      #707070;
+$font-family-base: Nunito;
+$font-weight-base: 400;
+$font-weight-bold: 600;
+$font-size-base: 1.5rem;
+$h1-font-size: 3.75rem;
+$h2-font-size: 3rem;
+$h3-font-size: 2.625rem;
+$h4-font-size: 2rem;
+$h5-font-size: 1.5rem;
+$h6-font-size: 1rem;
+$enable-rounded : true;
+$enable-shadows : true;
+$line-height-base : 1.2;
+$font-sizes: (
+  1: 30px,
+  2: 24px,
+  3: 21px,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: 16px
+);
+
+@import "onboarding-assets/bootstrap-5.0.2/scss/bootstrap.scss";
+
+@media screen and (max-width: 800px) {
+  .grey-combobox {
+    width: 277px;
+    height: 50px;
+  }
+  .header-background {
+    padding: 35px 22px;
+  }
+  .banner-small-background {
+    margin: 50px 0 0 0;
+    height: 193px;
+    padding: 10px 20px;
+  }
+
+  .banner-medium-background {
+    margin: 0px;
+    height: 450px;
+    padding: 10px 20px;
+  }
+
+  .banner-large-background {
+    height: 730px;
+    padding: 10px 20px;
+    margin: 0px;
+  }
+
+  .large-button {
+    width: 210px;
+    padding: 12px 0px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .grey-combobox {
+    width: 700px;
+    height: 50px;
+  }
+
+  .header-background {
+    height: 533px;
+    padding: 90px 100px;
+  }
+
+  .banner-small-background {
+    margin: 50px 0 0 0;
+    height: 335px;
+    padding: 10px 20px;
+  }
+
+  .banner-medium-background {
+    height: 350px;
+    padding: 53px 263px;
+    margin: 50px 0 0 0;
+  }
+
+  .banner-large-background {
+    margin: 50px 0 0px;
+    height: 450px;
+    padding: 28px 208px;
+  }
+
+  .large-button {
+    width: 310px;
+    padding: 12px 85px 11px 85px;
+  }
+}
+
+body {
+  margin: 0px;
+}
+
+.header-background {
+  margin: 17px 0;
+  background-image: linear-gradient(106deg, #11afaf 0%, #5853bc 104%);
+}
+
+.large-button {
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.bitter-font {
+  font-family: 'Bitter', serif;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.banner-small-background, .banner-medium-background, .banner-large-background {
+    background-color: #f0f0f0;
+  }
+
+.round-button {
+  width: 60px;
+  height: 60px;
+  margin: 0 59px 42px;
+  padding: 6px 5px;
+  border: solid 1px #707070;
+  border-radius: 40px;
+}
+
+.medium-button {
+  width: 206px;
+  height: 42px;
+  padding: 5px 0px 0px 0px;
+  margin: 44px 0 0;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.footer-background {
+  height: 234px;
+  background-image: linear-gradient(106deg, #11afaf 0%, #5853bc 104%);
+  padding: 50px 0;
+}
+
+.grey-combobox {
+  margin: 2px 0px 20px 0px;
+  padding: 11px 32px 9px 40px;
+  border-radius: 50px;
+  border: solid 1px #d2d2d2;
+  background-color: #ffffff;
+  -webkit-appearance: none;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd0;
+  background-position-x: calc( 100% - 15px );
+  select {
+    padding: 0px 20px;
+  }
+}
