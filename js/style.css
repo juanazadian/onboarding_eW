@@ -10746,7 +10746,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.modal-juan {
+.modal-custom {
   display: none;
   position: fixed;
   z-index: 1;
@@ -10760,7 +10760,7 @@ textarea.form-control-lg {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content-juan {
+.modal-content-custom {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;

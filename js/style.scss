@@ -1,6 +1,6 @@
-@import "bootstrap-5.0.2/scss/bootstrap.scss";
+@import "/Users/user/Desktop/onboarding/onboarding_eW/bootstrap-5.0.2/scss/bootstrap.scss";
 
-.modal-juan {
+.modal-custom {
   display: none;
   position: fixed;
   z-index: 1;
@@ -14,7 +14,7 @@
   background-color: rgba(0,0,0,0.4);
 }
 
-.modal-content-juan {
+.modal-content-custom {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
