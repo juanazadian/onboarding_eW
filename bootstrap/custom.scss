@@ -27,7 +27,7 @@ $font-sizes: (
   6: 16px
 );
 
-@import "/Users/user/Desktop/onboarding/onboarding_eW/bootstrap-5.0.2/scss/bootstrap.scss";
+@import "../bootstrap-5.0.2/scss/bootstrap.scss";
 
 @media screen and (max-width: 800px) {
   .grey-combobox {
