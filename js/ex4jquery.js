@@ -1,19 +1,19 @@
 function loadLocalStorage(){
-  let wishlistItemsJSON = localStorage.getItem("wishlistItems")
+  let wishlistItemsJSON = localStorage.getItem("wishlistItems");
   if (!wishlistItemsJSON.length)
     return;
 
   wishlistItems = JSON.parse(wishlistItemsJSON);
   var keys = Object.keys(wishlistItems);
   var i = keys.length;
-  while ( i-- ) {
+  while (i--) {
     newrow = "<tr><td>" + keys[i] + "</td><td>" + wishlistItems[keys[i]] + '</td><td><input type="checkbox" name="done1" value="done1"></td></tr>';
     $("table tbody").append(newrow);
   }
 }
 
 function updateLocalstorage() {
-  let wishlistItemsJSON = localStorage.getItem("wishlistItems")
+  let wishlistItemsJSON = localStorage.getItem("wishlistItems");
   if (wishlistItemsJSON.length) {
     wishlistItems = JSON.parse(wishlistItemsJSON);
   } else {
@@ -27,6 +27,7 @@ function updateLocalstorage() {
 function checkBudget() {
   let acc = 0;
   let budget = parseInt($("#budget").text());
+
   $("table > tbody > tr").each(function() {
     value = parseInt($(this).children()[1].innerHTML);
     acc += value;
