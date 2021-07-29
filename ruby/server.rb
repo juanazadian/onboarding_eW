@@ -1,6 +1,8 @@
 require 'sinatra'
 require_relative 'wishlist_item'
 
+$budget = 2250
+
 $wishlist_elements = [
   WishlistItem.new('Auriculares', 200),
   WishlistItem.new('Computadora', 400)
@@ -22,7 +24,7 @@ get '/optimize' do
   @acc = 0
   $wishlist_elements.each do |a|
     @acc += a.cost.to_i
-    if @acc <= 2250
+    if @acc <= $budget
       a.checked = true
     end
   end
