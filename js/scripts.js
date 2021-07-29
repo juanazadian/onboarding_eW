@@ -30,7 +30,7 @@ form.onsubmit = function(event){
 function checkBudget(rows){
   var acc = 0;
   var budget = parseInt(document.getElementById("budget").innerHTML);
-  for (i = 1; i < (rows.length - 1); i++) {
+  for (i = 1; i < (rows.length); i++) {
     var value = parseInt(rows[i].getElementsByTagName("td")[1].innerHTML);
     acc += value;
     if (acc<=budget) {
