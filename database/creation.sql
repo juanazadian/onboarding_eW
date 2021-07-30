@@ -5,7 +5,8 @@ CREATE TABLE users(
 
 CREATE TABLE items(
 	itemid serial PRIMARY KEY,
-	item_name VARCHAR (50) NOT NULL
+	item_name VARCHAR (50) NOT NULL,
+	cost VARCHAR (50) NOT NULL
 );
 
 CREATE TABLE wishlist(
