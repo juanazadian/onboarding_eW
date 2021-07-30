@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="stylesheet/style.css" rel="stylesheet">
+
+    <title>ex ruby on sinatra</title>
+  </head>
+  <body>
+    <div id="modal" class="modal-custom text-white">
+      <div class="modal-content-custom bg-success">
+        <h1>New Item</h1>
+        <form id="form" action='/add' method="POST">
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name"><br>
+          <label for="cost">Cost:</label><br>
+          <input type="text" id="cost" name="cost"><br><br>
+          <input type="submit" id="create" value="Create">
+        </form>
+      </div>
+    </div>
+    <main>
+      <section class="container-fluid bg-primary vh-100">
+        <section class="row d-flex justify-content-center">
+          <section class="col-9 text-white">
+            <h1>JS recruiting test</h1>
+            <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laudantium modi harum laborum! Autem deserunt quam provident tempora alias error? Maxime debitis officiis delectus voluptas quo quis quod numquam explicabo.</p>
+            <h1 class="mt-4">Budget: $<span id="budget">2250</span></h1>
+            <table class="table text-white">
+              <thead>
+                <tr>
+                  <th scope="col" class="table-success">Wishlist</th>
+                  <th scope="col">Cost</th>
+                  <th scope="col">Completed?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @wishlist_elements.each do |a| %>
+                  <tr>
+                    <td><%= a.name %></td>
+                    <td><%= a.cost %></td>
+                    <td><input type="checkbox" name="done1" value="done1" <%= a.checked ? 'checked="checked"' : "" %> >
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+            <section class="row d-flex justify-content-end">
+              <section class="col-2 text-white">
+                <button id="addbtn" type="button" class="btn btn-outline-secondary bg-white">A D D</button>
+              </section>
+              <section class="col-2 text-white">
+                <a id="optimbtn" href="/optimize" type="button" class="btn btn-outline-secondary bg-white">OPTIMIZE</a>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+    </main>
+    <script src="javascript/scripts.js"></script>
+  </body>
+</html>
