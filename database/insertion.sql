@@ -1,8 +1,8 @@
 INSERT INTO users (username)
 VALUES ('juan'),('jp'),('fino'),('facu'),('flo'),('vicki');
 
-INSERT INTO items (item_name)
-VALUES ('Auriculares'),('Computadora'),('Parlante'),('Televisor'),('Cuadro'),('Sofa'),('Cama');
+INSERT INTO items(item_name,cost)
+VALUES ('Auriculares','200'),('Computadora','700'),('Parlante','100'),('Televisor','250'),('Cuadro','300'),('Sofa','400'),('Cama','550');
 
 INSERT INTO wishlist
 VALUES (1,4,FALSE),(1,7,FALSE),(2,1,FALSE),(2,2,FALSE),(2,3,FALSE),(2,7,FALSE),
