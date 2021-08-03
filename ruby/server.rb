@@ -16,7 +16,7 @@ end
 
 
 post '/add' do
-  $wishlist_elements << WishlistItem.new(params["name"] , params["cost"], false)
+  $wishlist_elements << WishlistItem.new(params['name'] , params['cost'], false)
   redirect '/'
 end
 
@@ -34,12 +34,12 @@ end
 
 post '/organize' do
   @wishlist_for_user = []
-  if params["name"]
+  if params['name']
     begin
       conn = PGconn.open(dbname: 'learn_to_code')
       res  = conn.exec("select items.item_name, items.cost, wishlist.completed
                         from users join (items join wishlist using (itemid)) using (userid)
-                        where users.username = '#{params["name"]}';")
+                        where users.username = '#{params['name']}';")
       res.each do |row|
         @completed = (row['completed'] == 't')
         puts @completed
