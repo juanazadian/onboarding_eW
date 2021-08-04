@@ -1,0 +1,68 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+$theme-colors: (
+  "primary":       #5bd8d5,
+  "secondary":     #8fa5c1,
+);
+$border-radius: .625rem;
+$gray-900:      #222b36;
+$font-family-base: Nunito;
+$font-weight-base: 400;
+$font-weight-bold: 600;
+$font-size-base: 1.5rem;
+$font-sizes: (
+  1: 30px,
+  2: 24px,
+  3: 21px,
+  4: 16px,
+  5: 15px,
+  6: 14px
+);
+
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+a {
+  color: #404955;
+}
+
+body {
+  background-color: #fff;
+}
+
+.main-button {
+  padding: 0px 28px;
+  border-radius: 7px;
+  background-color: #5bd8d5;
+  border-style: none;
+}
+
+.button-size-large {
+  width: 272px;
+  height: 50px;
+}
+
+.form-input-box {
+  width: 272px;
+  height: 45px;
+  border-radius: 5px;
+  border: solid 1px #8fa5c1;
+}
+
+.header-background {
+  height: 80px;
+  padding: 13px 49px 0px 36px;
+  background-image: linear-gradient(266deg, #7af1cb -9%, #156cb1 96%);
+}
+
+.service-box {
+  width: 74px;
+  height: 74px;
+  padding: 15px 17px 16px 16px;
+  border-radius: 36px;
+  box-shadow: 0 2px 28px -4px rgba(57, 98, 113, 0.3);
+  border: solid 1px #d5e3f3;
+  background-color: #fff;
+}
