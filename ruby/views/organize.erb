@@ -9,25 +9,17 @@
     <title>ex ruby on sinatra</title>
   </head>
   <body>
-    <div id="modal" class="modal-custom text-white">
-      <div class="modal-content-custom bg-success">
-        <h1>New Item</h1>
-        <form id="form" action='/add' method="POST">
-          <label for="name">Name:</label><br>
-          <input type="text" id="name" name="name"><br>
-          <label for="cost">Cost:</label><br>
-          <input type="text" id="cost" name="cost"><br><br>
-          <input type="submit" id="create" value="Create">
-        </form>
-      </div>
-    </div>
     <main>
       <section class="container-fluid bg-primary vh-100">
         <section class="row d-flex justify-content-center">
           <section class="col-9 text-white">
-            <h1>JS recruiting test</h1>
+            <h1>Organize your wishlist</h1>
             <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laudantium modi harum laborum! Autem deserunt quam provident tempora alias error? Maxime debitis officiis delectus voluptas quo quis quod numquam explicabo.</p>
-            <h1 class="mt-4">Budget: $<span id="budget">2250</span></h1>
+            <form id="formorg" action='/organize' method="POST">
+              <label for="username">username:</label><br>
+              <input type="text" id="name" name="name"><br>
+              <input type="submit" id="search" value="search">
+            </form>
             <table class="table text-white">
               <thead>
                 <tr>
@@ -37,7 +29,7 @@
                 </tr>
               </thead>
               <tbody>
-                <% @wishlist_elements.each do |a| %>
+                <% @wishlist_for_user.each do |a| %>
                   <tr>
                     <td><%= a.name %></td>
                     <td><%= a.cost %></td>
@@ -49,15 +41,7 @@
             </table>
             <section class="row d-flex justify-content-end">
               <section class="col-2 text-white">
-                <button id="addbtn" type="button" class="btn btn-outline-secondary bg-white">A D D</button>
-              </section>
-              <section class="col-2 text-white">
-                <a id="optimbtn" href="/optimize" type="button" class="btn btn-outline-secondary bg-white">OPTIMIZE</a>
-              </section>
-              <section class="col-2 text-white">
-                <form id="form" action='/organize' method="POST">
-                  <input type="submit" id="ORGANIZE" class="btn btn-outline-secondary bg-white" value="ORGANIZE">
-                </form>
+                <a id="gobackbtn" href="/" type="button" class="btn btn-outline-secondary bg-white">GO BACK</a>
               </section>
             </section>
           </section>
