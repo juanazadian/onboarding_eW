@@ -68,3 +68,6 @@ rails/planit/.yarn-integrity
 rails/planit/storage/*
 !rails/planit/storage/.keep
 rails/planit/public/uploads
+
+# databse config
+rails/planit/config/database.yml
