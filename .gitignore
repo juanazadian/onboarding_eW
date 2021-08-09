@@ -1,1 +1,70 @@
-.DS_Store
+*.DS_Store
+*.rbc
+capybara-*.html
+.rspec
+rails/planit/db/*.sqlite3
+rails/planit/db/*.sqlite3-journal
+rails/planit/db/*.sqlite3-[0-9]*
+rails/planit/public/system
+rails/planit/coverage/
+rails/planit/spec/tmp
+rails/planit/*.orig
+rails/planit/rerun.txt
+rails/planit/pickle-email-*.html
+
+# Ignore all logfiles and tempfiles.
+rails/planit/log/*
+rails/planit/tmp/*
+!rails/planit/log/.keep
+!rails/planit/tmp/.keep
+
+# TODO Comment out this rule if you are OK with secrets being uploaded to the repo
+rails/planit/config/initializers/secret_token.rb
+rails/planit/config/master.key
+
+# Only include if you have production secrets in this file, which is no longer a Rails default
+# config/secrets.yml
+
+# dotenv, dotenv-rails
+# TODO Comment out these rules if environment variables can be committed
+rails/planit/.env
+rails/planit/.env.*
+
+## Environment normalization:
+rails/planit/.bundle
+rails/planit/vendor/bundle
+
+# these should all be checked in to normalize the environment:
+# Gemfile.lock, .ruby-version, .ruby-gemset
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+rails/planit/.rvmrc
+
+# if using bower-rails ignore default bower_components path bower.json files
+rails/planit/vendor/assets/bower_components
+rails/planit/*.bowerrc
+rails/planit/bower.json
+
+# Ignore pow environment settings
+rails/planit/.powenv
+
+# Ignore Byebug command history file.
+rails/planit/.byebug_history
+
+# Ignore node_modules
+rails/planit/node_modules/
+
+# Ignore precompiled javascript packs
+rails/planit/public/packs
+rails/planit/public/packs-test
+rails/planit/public/assets
+
+# Ignore yarn files
+rails/planit/yarn-error.log
+rails/planit/yarn-debug.log*
+rails/planit/.yarn-integrity
+
+# Ignore uploaded files in development
+rails/planit/storage/*
+!rails/planit/storage/.keep
+rails/planit/public/uploads
