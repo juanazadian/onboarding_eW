@@ -5,7 +5,7 @@ ActiveAdmin.register Provider do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :name, :category_id, :img, :desc, :delivery
+  permit_params :name, :category_id, :img, :desc, :delivery, :address, :closing_time, :opening_time
   #
   # or
   #

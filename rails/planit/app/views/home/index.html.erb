@@ -1,3 +1,4 @@
+<%= render 'home/header' %>
 <% if user_signed_in? %>
   <h2>Welcome <%= current_user.name if current_user %> </h2>
   <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
@@ -5,8 +6,6 @@
   <%= link_to 'Sign In', new_user_session_path %>
   <%= link_to 'Register', new_user_registration_path %>
 <%end%>
-
-<%= render "header" %>
 
 <main class="container">
   <section class="row">
@@ -29,21 +28,23 @@
   <section class="row justify-content-center mt-4">
     <% @providers.each do |p| %>
       <div class="col-3 card m-3 rounded d-flex flex-column shadow m-4 p-0">
-        <div class="card-body d-flex flex-column">
-          <img src="<%= image_path("#{p.img}") %>">
-          <p class="text-body fs-3 m-0 mt-3"><b><%= p.name %></b></p>
-          <p class="text-body fs-6 m-0"><small><%= p.desc %></small></p>
-          <% if p.delivery %>
-            <div class="row d-flex pt-1 no-gutters p-0">
-              <div class="col-1 p-0">
-                <img src="<%= image_path('camion.svg') %>">
+        <a href="<%= provider_path(p) %>" class="text-decoration-none">
+          <div class="card-body d-flex flex-column">
+            <img src="<%= image_path("#{p.img}") %>">
+            <p class="text-body fs-3 m-0 mt-3"><b><%= p.name %></b></p>
+            <p class="text-body fs-6 m-0"><small><%= p.desc %></small></p>
+            <% if p.delivery %>
+              <div class="row d-flex pt-1 no-gutters p-0">
+                <div class="col-1 p-0">
+                  <img src="<%= image_path('camion.svg') %>">
+                </div>
+                <div class="col-10 p-0">
+                  <p class="text-body fs-6 m-2">Entrega a domicilio</p>
+                </div>
               </div>
-              <div class="col-10 p-0">
-                <p class="fs-6 m-2">Entrega a domicilio</p>
-              </div>
-            </div>
-          <% end %>
-        </div>
+            <% end %>
+          </div>
+        </a>
       </div>
     <% end %>
   </section>
