@@ -1,0 +1,20 @@
+<h1>Hola</h1>
+<% if user_signed_in? %>
+  <h2><%= current_user.name if current_user %> </h2>
+  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to 'Sign In', new_user_session_path %>
+  <%= link_to 'Register', new_user_registration_path %>
+<%end%>
+
+<%= render "header" %>
+
+<main class="container">
+  <section class="row">
+    <p class="fs-4 mt-5">S E R V I C I O S</p>
+  </section>
+  <section class="row">
+
+  </section>
+
+</main>
