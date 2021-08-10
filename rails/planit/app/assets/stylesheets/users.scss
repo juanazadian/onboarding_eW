@@ -15,7 +15,7 @@ $font-size-base: 1.5rem;
 $font-sizes: (
   1: 30px,
   2: 24px,
-  3: 21px,
+  3: 18px,
   4: 16px,
   5: 15px,
   6: 14px
@@ -34,9 +34,9 @@ body {
 
 .main-button {
   padding: 0px 28px;
-  border-radius: 7px;
-  background-color: #5bd8d5;
-  border-style: none;
+  border-radius: 7px !important;
+  background-color: #5bd8d5 !important;
+  border-style: none !important;
 }
 
 .button-size-large {
@@ -45,10 +45,10 @@ body {
 }
 
 .form-input-box {
-  width: 272px;
+  width: 272px !important;
   height: 45px;
-  border-radius: 5px;
-  border: solid 1px #8fa5c1;
+  border-radius: 5px !important;
+  border: solid 1px #8fa5c1 !important;
 }
 
 .header-background {
