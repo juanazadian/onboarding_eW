@@ -2,7 +2,7 @@
 <main class="container-fluid bg-tertiary">
   <section class="row justify-content-center">
     <section class="card col-9 p-0 rounded-0">
-      <img src="<%= image_path("#{@provider.img}") %>" class="h-25 card-img-top rounded-0 object-fit-cover">
+      <%= image_tag "#{@provider.img}", class: "h-25 card-img-top rounded-0 object-fit-cover" %>
       <div class="card-body">
         <h4><b><%= @provider.name %></b></h4>
         <p class="fs-6"><%= @provider.address %></p>
@@ -41,7 +41,7 @@
                       <p class="text-body fs-3 m-0 mt-4"><b>$<%= p.cost.to_i %></b><span class="fs-6 text-gray">  x invitado</span></p>
                     </div>
                     <div class="col-3">
-                      <img src="<%= image_path("#{p.img}") %>" class="img-fluid">
+                      <%= image_tag "#{p.img}", class: "img-fluid" %>
                     </div>
                   </div>
                 </div>
