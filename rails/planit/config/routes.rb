@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root "home#index"
   get "/:category", to: "home#index"
+  resources :providers, only: [:index, :show]
   devise_for :users, controllers: {registrations: "registrations"}
 end

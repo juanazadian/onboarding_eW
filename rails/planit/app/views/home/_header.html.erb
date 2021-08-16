@@ -1,9 +1,17 @@
 <header class="container-fluid header-background ">
   <section class="row d-flex justify-content-between">
     <div class="col-1 pt-2">
-      <img src="<%= image_path('logo-blanco.svg') %>" class="img-fluid">
+      <a href=<%= root_path() %>>
+        <%= image_tag 'logo-blanco.svg', class: "img-fluid" %>
+      </a>
     </div>
-    <div class="col-2 d-flex pt-1">
+    <div class="col-3 d-flex pt-1 align-items-center justify-content-end">
+      <% if user_signed_in? %>
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "btn btn-light fs-4 text-white" %>
+          <%= link_to 'Edit Information', edit_user_registration_path, class: "btn btn-light fs-4 text-white" %>
+      <% else %>
+          <%= link_to 'Sign In', new_user_session_path, class: "btn btn-light fs-4 text-white" %>
+      <%end%>
       <img src="<%= image_path('pedidos.svg') %>" class="img-fluid">
       <h6 class="text-white m-2">Mis compras</h6>
     </div>

@@ -5,6 +5,7 @@
 $theme-colors: (
   "primary":       #5bd8d5,
   "secondary":     #8fa5c1,
+  "tertiary":      #f3fcff,
 );
 $border-radius: .625rem;
 $gray-900:      #222b36;
@@ -12,6 +13,12 @@ $font-family-base: Nunito;
 $font-weight-base: 400;
 $font-weight-bold: 600;
 $font-size-base: 1.5rem;
+$h1-font-size: 3.75rem;
+$h2-font-size: 3rem;
+$h3-font-size: 2.625rem;
+$h4-font-size: 1.3125rem;
+$h5-font-size: 1.5rem;
+$h6-font-size: 1rem;
 $font-sizes: (
   1: 30px,
   2: 24px,
@@ -65,4 +72,8 @@ body {
   box-shadow: 0 2px 28px -4px rgba(57, 98, 113, 0.3);
   border: solid 1px #d5e3f3;
   background-color: #fff;
+}
+
+.object-fit-cover {
+  object-fit: cover;
 }
