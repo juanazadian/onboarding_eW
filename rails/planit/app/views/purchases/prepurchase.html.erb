@@ -1,0 +1,59 @@
+<%= render 'home/header' %>
+<main class="container-fluid bg-tertiary full-page">
+  <section class="row justify-content-center">
+    <section class="card col-8 p-5 rounded-0 full-page">
+      <div class="card-body p-5">
+        <div class="row justify-content-center">
+          <div class="col-7">
+            <%= form_with(model: Purchase.new, url: new_purchase_path, method: "get") do |f| %>
+
+                <h4><b>Tipo de entrega</b></h4>
+                <div class="field m-2 btn-group btn-group-toggle" role="group" aria-label="Basic radio toggle button group"">
+                  <%= f.radio_button :delivery, "A domicilio", autocomplete: "off", class: "btn-check" %>
+                  <%= f.label :delivery_true, "A domicilio", class: "btn btn-outline-primary" %>
+
+                  <%= f.radio_button :delivery, "Retiro en local", autocomplete: "off", class: "btn-check" %>
+                  <%= f.label :delivery_false, "Retiro en local", class: "btn btn-outline-primary" %>
+                </div>
+
+                <div class="field m-2">
+                  <%= f.label :address, "Dirección de entrega", class: "fs-6 text-dark" %><br />
+                  <%= f.text_field :address, autocomplete: "address", class: "form-input-box fs-4 p-2 w-100" %>
+                </div>
+
+                <div class="field m-2">
+                  <%= f.label :apartment, "Apartamento (opcional)", class: "fs-6 text-dark" %><br />
+                  <%= f.text_field :apartment, autocomplete: "apartment", class: "form-input-box fs-4 p-2 w-100" %>
+                </div>
+
+                <div class="field m-2">
+                  <%= f.label :date, "Fecha de entrega", class: "fs-6 text-dark" %><br />
+                  <%= f.date_field :date, autocomplete: "date", class: "form-input-box fs-4 p-2 w-100 text-secondary" %>
+                </div>
+
+                <div class="field m-2">
+                  <%= f.label :start_time, "Horario", class: "fs-6 text-dark" %><br />
+                  <%= f.time_field :start_time, autocomplete: "start_time", class: "form-input-box fs-4 p-2 text-secondary" %>
+                  <%= f.label :end_time, "hasta", class: "fs-6 text-dark mx-2" %>
+                  <%= f.time_field :end_time, autocomplete: "end_time", class: "form-input-box fs-4 p-2 text-secondary" %>
+                </div>
+
+                <div class="field m-2">
+                  <%= f.label :comments, "Comentarios", class: "fs-6 text-dark" %><br />
+                  <%= f.text_area :comments, autocomplete: "comments", class: "form-input-box fs-4 p-2 w-100" %>
+                </div>
+
+                  <%= f.hidden_field :quantity, value: @quantity %>
+                  <%= f.hidden_field :product_id, value: @product %>
+
+                <div class="actions m-2 mt-4">
+                  <%= f.submit "Continuar", class: "main-button button-size-large fs-4" %>
+                </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>
+

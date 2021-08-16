@@ -1,0 +1,61 @@
+<%= render 'home/header' %>
+<main class="container-fluid bg-tertiary">
+  <section class="row justify-content-center">
+    <section class="card col-8 p-5 rounded-0">
+      <div class="card-body">
+        <h2><b>Mis Compras</b></h2>
+        <div class="row d-flex justify-content-center">
+        <% @purchases.each do |p| %>
+            <div class="card col-5 m-3">
+              <div class="card-body p-4">
+                <div class="row d-flex justify-content-start">
+                  <div class="col-2 p-0 mt-1">
+                    <img src="<%= image_path("#{p.product.img}") %>" class="img-fluid rounded-2">
+                  </div>
+                  <div class="col-10">
+                    <p class="fs-3 m-0"><b><%= p.product.provider.name %></b></p>
+                    <% if p.delivery %>
+                      <div class="row m-0 mx-1 fs-6">
+                          <div class="col-1 p-0">
+                            <i class="fas fa-truck fa-sm text-primary"></i>
+                          </div>
+                          <div class="col-10 p-0">
+                            <p class="text-secondary">Entrega a domicilio</p>
+                          </div>
+                      </div>
+                    <% else %>
+                      <div class="row m-0 mx-2">
+                        <div class="row d-flex no-gutters p-0">
+                          <div class="col-10 p-0">
+                            <p class="fs-6 mx-1 text-secondary">Retiro en el local</p>
+                          </div>
+                        </div>
+                      </div>
+                    <% end %>
+                    <p class="fs-4 m-0 mt-2"><b><%= p.product.name %></b></p>
+                    <p class="fs-6 m-0"><%= p.product.description[0,35] %><%= '...' if (p.product.description.length > 35) %></p>
+                    <a class="fs-4"><b>Ver detalles</b></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer bg-white p-3">
+                <div class="row d-flex justify-content-between">
+                  <div class="col-6">
+                    <p class="fs-3 m-0"><b>Total: $<%= p.quantity.to_i * p.product.cost.to_i %></b></p>
+                    <p class="fs-6 text-secondary m-0">Expira: <%= p.date.to_s %></p>
+                  </div>
+                  <div class="col-4">
+                    <a href="<%= new_purchase_path() %>">
+                      <button class="main-button text-dark button-size-small fs-3 text-decoration-none"><b>Pagar</b></button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <% end %>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>
+

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_09_160352) do
+ActiveRecord::Schema.define(version: 2021_08_11_133651) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -70,6 +70,24 @@ ActiveRecord::Schema.define(version: 2021_08_09_160352) do
     t.index ["category_id"], name: "index_providers_on_category_id"
   end
 
+  create_table "purchases", force: :cascade do |t|
+    t.boolean "delivery"
+    t.integer "quantity"
+    t.string "address"
+    t.string "apartment"
+    t.date "date"
+    t.time "start_time"
+    t.time "end_time"
+    t.text "comments"
+    t.string "payment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
+    t.integer "product_id", null: false
+    t.index ["product_id"], name: "index_purchases_on_product_id"
+    t.index ["user_id"], name: "index_purchases_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -86,4 +104,6 @@ ActiveRecord::Schema.define(version: 2021_08_09_160352) do
 
   add_foreign_key "products", "providers"
   add_foreign_key "providers", "categories"
+  add_foreign_key "purchases", "products"
+  add_foreign_key "purchases", "users"
 end

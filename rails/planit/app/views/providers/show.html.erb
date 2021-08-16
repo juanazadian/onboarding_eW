@@ -5,26 +5,26 @@
       <img src="<%= image_path("#{@provider.img}") %>" class="h-25 card-img-top rounded-0 object-fit-cover">
       <div class="card-body">
         <h4><b><%= @provider.name %></b></h4>
-        <p class="fs-6"><%= @provider.address %></p>
-        <p class="fs-6 my-3"><%= @provider.desc %></p>
+        <p class="fs-6 text-darky"><%= @provider.address %></p>
+        <p class="fs-6 my-3 text-darky"><%= @provider.desc %></p>
         <div class="col-2">
-          <div class="row d-flex pt-1 no-gutters p-0">
-            <div class="col-1">
-              <img src="<%= image_path('hora.svg') %>">
+          <div class="row m-0 mx-1 fs-6">
+            <div class="col-1 p-0">
+              <i class="fas fa-clock fa-sm text-primary"></i>
             </div>
             <div class="col-10 p-0">
-              <p class="fs-6 m-2"><%= @provider.opening_time %> a <%= @provider.closing_time %></p>
+              <p class="fs-6 text-darky"><%= @provider.opening_time %> a <%= @provider.closing_time %></p>
             </div>
           </div>
         </div>
         <% if @provider.delivery %>
           <div class="col-2">
-            <div class="row d-flex pt-1 no-gutters p-0">
+            <div class="row m-0 mx-1 fs-6">
               <div class="col-1 p-0">
-                <img src="<%= image_path('camion.svg') %>">
+                <i class="fas fa-truck fa-sm text-primary"></i>
               </div>
               <div class="col-10 p-0">
-                <p class="fs-6 m-2">Entrega a domicilio</p>
+                <p class="text-darky">Entrega a domicilio</p>
               </div>
             </div>
           </div>
@@ -33,17 +33,19 @@
           <div class="col-11">
             <div class="row d-flex justify-content-between">
               <% @provider.products.each do |p| %>
-                <div class="col-5 card border-light border-0 border-bottom shadow-none mx-4 m-3 p-0">
-                  <div class="card-body d-flex justify-content-between">
-                    <div class="col-8">
-                      <p class="text-body fs-4 m-0"><b><%= p.name %></b></p>
-                      <p class="text-body fs-6 m-0"><small><%= p.description[0,35] %><%= '...' if (p.description.length > 35) %></small></p>
-                      <p class="text-body fs-3 m-0 mt-4"><b>$<%= p.cost.to_i %></b><span class="fs-6 text-gray">  x invitado</span></p>
+                <div class="col-5 card border-light border-0 border-bottom shadow-none rounded-0 mx-4 m-3 p-0">
+                  <a href="<%= product_path(p) %>" class="text-decoration-none">
+                    <div class="card-body d-flex justify-content-between">
+                      <div class="col-8">
+                        <p class="text-body fs-4 m-0"><b><%= p.name %></b></p>
+                        <p class="text-body fs-6 m-0"><small><%= p.description[0,35] %><%= '...' if (p.description.length > 35) %></small></p>
+                        <p class="text-body fs-3 m-0 mt-4"><b>$<%= p.cost.to_i %></b><span class="fs-6 text-gray">  x invitado</span></p>
+                      </div>
+                      <div class="col-3">
+                        <img src="<%= image_path("#{p.img}") %>" class="img-fluid">
+                      </div>
                     </div>
-                    <div class="col-3">
-                      <img src="<%= image_path("#{p.img}") %>" class="img-fluid">
-                    </div>
-                  </div>
+                  </a>
                 </div>
               <% end %>
             </div>
