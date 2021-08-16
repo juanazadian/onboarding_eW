@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  delivery: false
+  quantity: 1
+  address: MyString
+  apartment: MyString
+  date: 2021-08-10
+  start_time: 2021-08-10 14:05:11
+  end_time: 2021-08-10 14:05:11
+  comments: MyText
+  payment: MyString
+
+two:
+  delivery: false
+  quantity: 1
+  address: MyString
+  apartment: MyString
+  date: 2021-08-10
+  start_time: 2021-08-10 14:05:11
+  end_time: 2021-08-10 14:05:11
+  comments: MyText
+  payment: MyString
